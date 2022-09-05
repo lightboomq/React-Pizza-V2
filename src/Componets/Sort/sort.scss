@@ -1,0 +1,37 @@
+.sort_block{
+      display: flex;
+      width: 280px;
+            span{
+                  color:#fe5f1e;
+                  font-weight: 400;
+                  border-bottom: 1px dashed #fe5f1e;
+                  cursor: pointer;
+            }
+            li{
+                  list-style-type: none;
+                        
+            }
+            li:hover{
+                  background-color: #FFF7F4;
+            }     
+            
+            .sort_popular{
+                  position: absolute;
+                  border-radius: 10px;
+                  padding: 15px;
+                  box-shadow: 0 5px 15px rgb(0 0 0 / 9%);
+                  margin-left: 120px;
+                  margin-top: 25px;
+                  cursor: pointer;
+                  font-weight: 400;
+                  background-color: white;
+                  z-index: 3;
+            }
+            .active{
+                  color:#fe5f1e;
+                  background-color: #FFF7F4;
+                  font-weight: 400;
+            }
+            
+
+}

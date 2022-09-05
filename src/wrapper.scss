@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0; 
+  font-family: 'Nunito', sans-serif;
+}
+body {
+  background-color: #FFDF8C;
+  
+}
+.wrapper{
+  display: flex;
+  margin: auto;
+  max-width: 1460px;
+  background-color: white;
+  margin-top: 55px;
+  border-radius: 20px;
+  flex-direction: column; 
+    
+    h1{
+        position: relative;
+        left: 104px;
+        top: 52px;
+        font-size: 38px;
+        font-weight: 800;  
+    }
+    
+}
+.buttons_and_sort{
+  margin: 0 auto;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  height: 48px;
+  display: flex;
+   
+}
