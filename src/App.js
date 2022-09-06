@@ -20,7 +20,7 @@ function App() {
         <Buttons/>
         <Sort/>
     </div>
-    <h1>Все пиццы123</h1>
+    <h1>Все пиццы</h1>
     <div className="main">
       {arr.map((obj) =>(<Cart_Pizza name = {obj.name} price = {obj.price} imgURL = {obj.imgURL} sizes = {obj.size} typeNames={obj.typeName}/>))}
     </div>
