@@ -22,9 +22,9 @@ function Sort (){
       return( 
       <div className="sort_block">
             <h4 >Сортировка по: <span onClick = {()=>setOpen(!open)}>{sortName}</span>
-                   {open == true? <div className="sort_popular">
+                   {open === true? <div className="sort_popular">
                         <ul>
-                             {arraySort.map((name,index)=>(<li onClick = {()=>onClickList(index)} className={activeIndex == index ? "active" : ""}>{name}</li>))}
+                             {arraySort.map((name,index)=>(<li onClick = {()=>onClickList(index)} className={activeIndex ===index ? "active" : ""}>{name}</li>))}
                         </ul>
                    </div> : ""}
             </h4>    
