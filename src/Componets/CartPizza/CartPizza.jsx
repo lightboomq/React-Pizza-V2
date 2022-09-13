@@ -1,8 +1,8 @@
-import "./Cart_Pizza.scss";
+import "./CartPizza.scss";
 import React from 'react';
 
 
-function Cart_Pizza(props) {
+function CartPizza(props) {
      const [pizzaCounter, setCounter] = React.useState(0);
      const buttonAdd = () =>{
             setCounter(pizzaCounter+1)
@@ -23,7 +23,7 @@ function Cart_Pizza(props) {
                   <img width={260} height={260} src = {props.imgURL} alt=""/> 
                    <h3>{props.name}</h3> 
                   <div className="Cart_Selector">
-                        <ul>
+                       <ul>
                               {props.typeNames.map((typeName,index) => <li  onClick ={()=>onClickButtonName(index)} className={activeIndexName==index? 'active' : 'button_1'}>{typeName}</li>)}                
                         </ul>
 
@@ -40,4 +40,4 @@ function Cart_Pizza(props) {
       )
 
 }
-export default Cart_Pizza;
+export default CartPizza;

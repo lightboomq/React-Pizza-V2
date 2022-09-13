@@ -24,15 +24,22 @@ body {
         font-size: 38px;
         font-weight: 800;  
     }
+   .buttons_and_sort{
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-left: 50px;
     
-}
-.buttons_and_sort{
-  margin: 0 auto;
-  margin-top: 40px;
-  align-items: center;
-  justify-content: space-between;
-  width: 85%;
-  height: 48px;
-  display: flex;
-   
-}
+    align-items: center;
+    justify-content: space-between;
+    width: 86%;
+    height: 48px;
+    display: flex;
+        img{
+          cursor: pointer;
+          width: 46px;
+          height: 46px;
+        }  
+  }
+
+    
+}  
