@@ -33,6 +33,7 @@ function App() {
       </div>
         <Sort/>
     </div>
+    <></>
     
     <div className="main">
       {arrayPizzes.map((obj) =>(<CartPizza key={obj.name} name = {obj.name}  price = {obj.price} imgURL = {obj.imgURL} sizes = {obj.size} typeNames={obj.typeName}/>))}
