@@ -3,16 +3,10 @@
       z-index: 66;
       width: 35%;
       height: 100%;
-      
-      
-
-      
             ul{
                  list-style: none;
                  z-index: 55;
                  background-color: whitesmoke;
-                 
-
                   li{             
                         font-size: 27px;
                         display: flex;
@@ -20,9 +14,7 @@
                         height: 39px;
                         align-items: center;
                         justify-content: space-between;
-                        cursor: pointer; 
-                        
-                          
+                        cursor: pointer;                
                   }
                   .active{
                         background-color: orange;
@@ -30,10 +22,5 @@
                   } 
                                                   
             }
-      .empty_block{
-           
-            
-            background-color: aqua;
-      }     
             
 }

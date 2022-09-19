@@ -1,3 +1,4 @@
+
 .Header{
       display: flex;
       align-items: center;
@@ -14,15 +15,14 @@
                   
             }
             
-            }
             p{    
                   font-weight: 400;
                   font-size: 16px;
                   color:#7b7b7b;
-            }        
-           
-            
+            }            
             .Search{
+                  margin-left: 15px;
+                  margin-right: 25px;
                   background-color: white;
                   display:flex;
                   align-items: center;
@@ -40,12 +40,15 @@
                               font-weight: 400;
                               font-size: 16px;
                         }
+                        @media (max-width: 700px) {
+                             display: none;
+                            }
+                       
             }
-          
             .ShoppingBasket{
                   display: flex;
                   align-items: center;
-                  justify-content: space-evenly;
+                  justify-content: center;
                   width: 140px;
                   height: 51px;
                   border-radius: 30px;
@@ -62,3 +65,4 @@
                         }
             }
 
+}

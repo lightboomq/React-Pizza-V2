@@ -18,7 +18,7 @@ function BurgerMenu () {
                  <ul>
                         {categories.map((all,index)=>(
                               <li onClick={()=>onClickAdd(index)} className = {indexActive === index? 'active' : 'buttons'}>
-                              {all} <img className="burger_arrow" src="/img/BurgerMenuArrow.svg"/>
+                              {all} 
                               </li>
                               
                         ))}     

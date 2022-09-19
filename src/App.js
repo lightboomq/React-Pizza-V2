@@ -19,7 +19,7 @@ function App() {
     })
   }, []);
   
-  const[openBurgerMenu,setOpenBurgerMenu] = React.useState(true);
+  const[openBurgerMenu,setOpenBurgerMenu] = React.useState(false);
 
   return (
   <div className="wrapper">
@@ -33,8 +33,7 @@ function App() {
       </div>
         <Sort/>
     </div>
-
-    <h1>Все пиццы</h1>
+    
     <div className="main">
       {arrayPizzes.map((obj) =>(<CartPizza key={obj.name} name = {obj.name}  price = {obj.price} imgURL = {obj.imgURL} sizes = {obj.size} typeNames={obj.typeName}/>))}
     </div>
