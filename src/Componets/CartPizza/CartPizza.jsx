@@ -1,4 +1,4 @@
-import "./CartPizza.scss";
+import "./cartPizza.scss";
 import React from 'react';
 
 
@@ -19,10 +19,10 @@ function CartPizza(props) {
       }
       
       return(
-            <div className="Cart_Pizza">
+            <div className="сart_pizza">
                   <img width={260} height={260} src = {props.imgURL} alt=""/> 
                    <h3>{props.name}</h3> 
-                  <div className="Cart_Selector">
+                  <div className="cart_selector">
                        <ul>
                               {props.typeNames.map((typeName,index) => <li  onClick ={()=>onClickButtonName(index)} className={activeIndexName==index? 'active' : 'button_1'}>{typeName}</li>)}                
                         </ul>
@@ -32,7 +32,7 @@ function CartPizza(props) {
                               {props.sizes.map((size,index)=><li onClick={()=>onClickButtonSize(index)} className={activeIndexSize==index? 'active' : "button_1"}>{size}</li>)}
                         </ul>
                   </div>
-                  <div className="PriceAndAdd">
+                  <div className="priceAndAdd">
                         <h4>от: <span>{props.price} ₽</span></h4>
                         <button onClick = {buttonAdd} className="Add">Добавить <i>{pizzaCounter}</i></button>
                   </div>

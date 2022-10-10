@@ -1,5 +1,4 @@
-
-.Header{
+.header{
       display: flex;
       align-items: center;
       margin: auto;
@@ -7,8 +6,7 @@
       justify-content: space-between;
       height: 135px;
       background-color: white;
-      border-bottom: 1px solid rgba(0,0,0,.1);
-            
+      border-bottom: 1px solid rgba(0,0,0,.1);            
             p{    
                   font-weight: 400;
                   font-size: 16px;
@@ -34,10 +32,9 @@
                               font-weight: 400;
                               font-size: 16px;
                         }
-                        @media (max-width: 700px) {
+                        @media (max-width: 750px) {
                              display: none;
-                            }
-                       
+                            }                   
             }
             .shoppingBasket{
                   display: flex;
@@ -56,6 +53,7 @@
                               margin-left: 14px;
                               margin-right: 14px;
                               width: 1px;
+                              text-decoration: none;
                         }
             }
 

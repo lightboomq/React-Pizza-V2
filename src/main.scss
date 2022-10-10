@@ -1,8 +1,27 @@
 .main{
-      display: flex;
-      width: 86%;
+      display: grid; 
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+      grid-template-rows: 1fr 1fr; 
+      gap: 20px 20px; 
       margin: 0 auto;
-      margin-top: 60px;
-      flex-direction: row; 
-      flex-wrap: wrap;  
+            @media (max-width: 1610px) {
+                  grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media (max-width: 1361px) {
+                  grid-template-columns: 1fr 1fr ;
+                  gap: 20px 100px; 
+            }
+            @media (max-width: 943px) {
+                  grid-template-columns: 1fr 1fr ;
+                  gap: 20px 20px; 
+            }
+            @media (max-width: 799px) {
+                  grid-template-columns: 1fr 1fr ;
+                  gap: 20px 10px; 
+            }
+            @media (max-width: 781px) {
+                  grid-template-columns: 1fr;
+                  gap: 20px 10px; 
+            }
 }
+
