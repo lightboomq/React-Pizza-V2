@@ -14,10 +14,6 @@
                   margin: 0 auto;
                   width: 86%;
                   background-color: white;
-                  span{
-                        display: flex;
-                        justify-content: center;
-                  }
                   h2{
                         text-align: center;
                         font-weight: 700;
@@ -36,10 +32,23 @@
                   img{  
                         height: auto;
                         margin-top: 50px;
-                        width: 100%;
+                        width: 50%;
                         height: auto;
+                              @media  (max-width: 900px ) {
+                                    width: 80%;
+                                    height: auto;
+                              }
+                              @media  (max-width: 500px ) {
+                                    width: 100%;
+                                    height: auto;
+                              }
+                                    
+                              
                   }
                   .comeback_button{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         border: 0;
                         padding: 0;
                         background-color: transparent;
@@ -47,7 +56,6 @@
                         height: 50px;
                         background-color: #232323;
                         border-radius: 30px;
-                        cursor: pointer;
                         color: white;
                         font-size: 18px;
                         font-weight: 600;

@@ -11,7 +11,7 @@ function BasketBlock () {
                               Для того, чтобы заказать пиццу, перейдите на главную страницу.
                         </p>
                         <img src = "/img/sorry-empty-basket.png" width={300} height={255}/>
-                        <Link to ="/"><button className="comeback_button">Вернуться назад</button></Link>
+                        <Link style={{ textDecoration: 'none' }} to ="/"><button className="comeback_button">Вернуться назад</button></Link>
                   </div>
                  
             </div>
