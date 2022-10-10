@@ -6,7 +6,6 @@
       border-radius: 15px;
       flex-direction: column; 
       z-index: 250; 
-      text-align: center;
             .basket_content{
                   display: flex;
                   flex-direction: column;
@@ -14,25 +13,31 @@
                   align-items: center;
                   margin: 0 auto;
                   width: 86%;
-                  height: 755px;
                   background-color: white;
+                  span{
+                        display: flex;
+                        justify-content: center;
+                  }
                   h2{
+                        text-align: center;
                         font-weight: 700;
                         font-size:36px;
                         margin-top: 121px;
                         margin-bottom: 7px;
+                        height: auto;
                   }
                   p{
                         font-size: 20px;
                         font-weight: 400;
                         color:#777777;
-                              span{
-                                    margin-left: 72px;
-                              }
+                        text-align: center;
+      
                   }
                   img{  
-                        
+                        height: auto;
                         margin-top: 50px;
+                        width: 100%;
+                        height: auto;
                   }
                   .comeback_button{
                         border: 0;
@@ -47,6 +52,7 @@
                         font-size: 18px;
                         font-weight: 600;
                         margin-top:60px;
+                        margin-bottom: 60px;
                   }
                   .comeback_button:active{
                         box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
