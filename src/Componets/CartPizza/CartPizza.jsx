@@ -1,4 +1,4 @@
-import "./cartPizza.scss";
+import "./cartpizza.scss";
 import React from 'react';
 
 
@@ -13,7 +13,6 @@ function CartPizza(props) {
       const onClickButtonName=(index) => {
             setActiveIndexName(index);
       }
-      
       const onClickButtonSize = (index) => {
             setActiveIndexSize(index);
       }
