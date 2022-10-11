@@ -1,5 +1,5 @@
 import "./cartPizza.scss";
-import React from 'react';
+import React from "react";
 
 
 function CartPizza(props) {
