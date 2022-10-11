@@ -19,7 +19,8 @@ function CartPizza(props) {
       }
       
       return(
-            <div className="сart_pizza">
+      <div className="cart_pizza_block">   
+              <div className="сart_pizza">
                   <img width={260} height={260} src = {props.imgURL} alt=""/> 
                    <h3>{props.name}</h3> 
                   <div className="cart_selector">
@@ -39,6 +40,7 @@ function CartPizza(props) {
                         </button>
                   </div>
             </div>
+      </div> 
       )
 
 }

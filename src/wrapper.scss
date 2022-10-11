@@ -7,11 +7,12 @@
   body {
     background-color: #FFDF8C;
     padding-top: 50px;
+    background-size: contain
   }
 .wrapper{
   display: flex;
   flex-direction: column;
-  max-width: 80%;
+  max-width: 1400px;
   background-color: white;
   border-radius: 20px;
   margin: auto;
@@ -23,10 +24,6 @@
     width: 86%;
     height: 48px;
     display: flex;
-    
-      
-      
-      
         img{
           cursor: pointer;
           width: 46px;

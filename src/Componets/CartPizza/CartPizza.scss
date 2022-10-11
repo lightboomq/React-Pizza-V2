@@ -1,84 +1,87 @@
-.сart_pizza{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+
+.cart_pizza_block{
       width: 307px;
-      height: 530px;           
-      margin:0 auto;
-      position: relative;
-      top:49px;
-            .cart_selector{
-                  margin-top: 21px;
-                  border-radius: 10px;
-                  width: 280px;
-                  height: 88px;
-                  background-color: #F3F3F3;
-                        ul{
-                              display: flex;
-                              flex-direction: row;
-                              list-style-type: none;
-                              margin-top: 6px;
-                              cursor: pointer;
-                                    .button_1{
-                                          margin: auto;
-                                          display: flex;
-                                          align-items: center;
-                                          justify-content: center;
-                                          width: 134px;
-                                          height: 35px;                                                      
-                                          border-radius: 5px;                                             
-                                    }
-                                    .active{
-                                          margin: auto;
-                                          display: flex;
-                                          align-items: center;
-                                          justify-content: center;
-                                          width: 134px;
-                                          height: 35px;                                                      
-                                          border-radius: 5px;    
-                                          background-color: white;
-                                          color:black;
-                                    }     
-                        }
-            } 
-            .priceAndAdd{
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  width: 280px;
-                  height: 44px;
-                  margin-top: 22px;
-                        h4{
-                              font-size:22px;
-                              color:#232323;
-                        }
-                        .Add{
-                              display: flex;
-                              justify-content: center;
-                              width: 150px;
-                              height: 45px;
-                              border: 1px solid #FE5F1E;
-                              align-items: center;
-                              border-radius:30px;
-                              color: #FE5F1E;
-                              font-size: 16px;
-                              font-weight: 600;
-                              cursor: pointer;
-                              background-color: white;
-                              i{    
+     
+      .сart_pizza{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 307px;
+            margin:0 auto;
+            border-radius: 20px;
+                  .cart_selector{
+                        margin-top: 21px;
+                        border-radius: 10px;
+                        width: 280px;
+                        height: 88px;
+                        background-color: #F3F3F3;
+                              ul{
+                                    display: flex;
+                                    flex-direction: row;
+                                    list-style-type: none;
+                                    margin-top: 6px;
+                                    cursor: pointer;
+                                          .button_1{
+                                                margin: auto;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                width: 134px;
+                                                height: 35px;                                                      
+                                                border-radius: 5px;                                             
+                                          }
+                                          .active{
+                                                margin: auto;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                width: 134px;
+                                                height: 35px;                                                      
+                                                border-radius: 5px;    
+                                                background-color: white;
+                                                color:black;
+                                          }     
+                              }
+                  } 
+                  .priceAndAdd{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 280px;
+                        height: 44px;
+                        margin-top: 22px;
+                              h4{
+                                    font-size:22px;
+                                    color:#232323;
+                              }
+                              .Add{
                                     display: flex;
                                     justify-content: center;
+                                    width: 150px;
+                                    height: 45px;
+                                    border: 1px solid #FE5F1E;
                                     align-items: center;
-                                    background-color: #fe5f1e;
-                                    border-radius: 30px;
-                                    color: #fff;                                   
-                                    font-style: normal;
-                                    line-height: 22px;
-                                    width: 22px;
-                                    margin-left: 4px;
-                                    }   
-                                            
-                        }           
-                        
-            }               
+                                    border-radius:30px;
+                                    color: #FE5F1E;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    cursor: pointer;
+                                    background-color: white;
+                                    i{    
+                                          display: flex;
+                                          justify-content: center;
+                                          align-items: center;
+                                          background-color: #fe5f1e;
+                                          border-radius: 30px;
+                                          color: #fff;                                   
+                                          font-style: normal;
+                                          line-height: 22px;
+                                          width: 22px;
+                                          margin-left: 4px;
+                                          }   
+                                                
+                              }           
+                              
+                  }               
+      }
 }
