@@ -5,24 +5,14 @@
       gap: 60px 20px; 
       margin: 0 auto;
       margin-top: 35px;
-            @media (max-width: 1610px) {
-                  grid-template-columns: 1fr 1fr 1fr;
+            @media (max-width: 1293px){
+                  grid-template-columns: 1fr 1fr 1fr; 
             }
-            @media (max-width: 1361px) {
-                  grid-template-columns: 1fr 1fr ;
-                  gap: 50px 100px; 
+            @media (max-width: 977px){
+                  grid-template-columns: 1fr 1fr; 
             }
-            @media (max-width: 943px) {
-                  grid-template-columns: 1fr 1fr ;
-                  gap: 50px 20px; 
-            }
-            @media (max-width: 799px) {
-                  grid-template-columns: 1fr 1fr ;
-                  gap: 50px 10px; 
-            }
-            @media (max-width: 781px) {
-                  grid-template-columns: 1fr;
-                  gap: 50px 10px; 
+            @media (max-width: 637px){
+                  grid-template-columns: 1fr; 
             }
 }
 
