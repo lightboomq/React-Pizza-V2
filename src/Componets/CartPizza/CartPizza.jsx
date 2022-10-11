@@ -24,12 +24,12 @@ function CartPizza(props) {
                    <h3>{props.name}</h3> 
                   <div className="cart_selector">
                        <ul>
-                              {props.typeNames.map((typeName,index) => <li  onClick ={()=>onClickButtonName(index)} className={activeIndexName==index? 'active' : 'button_1'}>{typeName}</li>)}                
+                              {props.typeNames.map((typeName,index) => <li  onClick ={()=>onClickButtonName(index)} className={activeIndexName===index? 'active' : 'button_1'}>{typeName}</li>)}                
                         </ul>
 
 
                         <ul>
-                              {props.sizes.map((size,index)=><li onClick={()=>onClickButtonSize(index)} className={activeIndexSize==index? 'active' : "button_1"}>{size}</li>)}
+                              {props.sizes.map((size,index)=><li onClick={()=>onClickButtonSize(index)} className={activeIndexSize===index? 'active' : "button_1"}>{size}</li>)}
                         </ul>
                   </div>
                   <div className="priceAndAdd">

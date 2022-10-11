@@ -10,7 +10,7 @@ function BasketBlock () {
                               Вероятней всего, вы не заказывали ещё пиццу.<br/>
                               Для того, чтобы заказать пиццу, перейдите на главную страницу.
                         </p>
-                        <img src = "/img/sorry-empty-basket.png" width={300} height={255}/>
+                        <img src = "/img/sorry-empty-basket.png" width={300} height={255} alt = "Картинка чел с корзиной"/>
                         <Link style={{ textDecoration: 'none' }} to ="/"><button className="comeback_button">Вернуться назад</button></Link>
                   </div>
                  

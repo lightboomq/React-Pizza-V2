@@ -2,7 +2,6 @@ import React from "react";
 import BurgerMenu from '../Componets/BurgerMenu/BurgerMenu.jsx';
 import CartPizza from  "../Componets/CartPizza/CartPizza.jsx";
 import Sort from "../Componets/Sort/Sort.jsx";
-import Basket from "../Componets/BasketBlock/BasketBlock.jsx";
 import axios from "axios";
 
 
@@ -20,7 +19,7 @@ function Home () {
             <>
             <div className="buttons_and_sort">
                   <div className="burger_icon">
-                        <img onClick={()=>setOpenBurgerMenu(!openBurgerMenu)} src = "/img/BurgerMenuIcon.svg"/>
+                        <img onClick={()=>setOpenBurgerMenu(!openBurgerMenu)} src = "/img/BurgerMenuIcon.svg" alt="БургерМеню"/>
                         {openBurgerMenu ===true? <BurgerMenu/> : ""}
                   </div>
                   <Sort/>
