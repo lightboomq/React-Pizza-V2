@@ -7,9 +7,9 @@
                  list-style: none;
                  z-index: 55;
                  background-color: whitesmoke;
-                  li{             
+                 
+                  li{            
                         font-size: 27px;
-                        display: flex;
                         margin-top: 15px;
                         height: 39px;
                         align-items: center;
@@ -22,5 +22,8 @@
                   } 
                                                   
             }
-            
+            @media  (max-width: 600px ) {
+                  width: 207px;
+                  z-index: 67;
+            }
 }

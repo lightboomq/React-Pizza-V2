@@ -20,7 +20,6 @@ function Home () {
       },[categoryState,sortTypeState]);
 
       
-  console.log(categoryState,sortTypeState)
       
       return(
             <>
