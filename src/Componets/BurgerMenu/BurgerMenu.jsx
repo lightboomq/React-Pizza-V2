@@ -2,25 +2,21 @@ import  "./burgerMenu.scss"
 import React from "react";
 
 
-function BurgerMenu () {
-      const [indexActive,setIndexActive] = React.useState(0);
+function BurgerMenu ({categoryProps,onChangeCategoryProps,closeBurgerMenuProps}) {
 
-      const categories = ['Все','Мясные','Гриль','Острые','Закрытые'];
-      const onClickAdd = (index)=>{
-            setIndexActive(index);
+      const arrayСategory = ['Все','Мясные','Вегетарианская','Гриль','Острые','Закрытые'];
+      const iconBurger=(indexArrayCategories)=>{
+            onChangeCategoryProps(indexArrayCategories)
+            closeBurgerMenuProps(false)
       }
-
-    
-
       return(
       <div className = "burger_menu"> 
             <div>              
                  <ul>
-                        {categories.map((all,index)=>(
-                              <li onClick={()=>onClickAdd(index)} className = {indexActive === index? 'active' : 'buttons'}>
-                              {all} 
-                              </li>
-                              
+                        {arrayСategory.map((arrayCategoryName,indexArrayCategories)=>(
+                              <li onClick={()=>iconBurger(indexArrayCategories)} className = {categoryProps === indexArrayCategories? 'active' : 'buttons'}>
+                                    {arrayCategoryName} 
+                              </li>             
                         ))}     
                  </ul>  
             </div>   

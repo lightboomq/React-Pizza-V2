@@ -2,36 +2,41 @@ import React from "react";
 import BurgerMenu from '../Componets/BurgerMenu/BurgerMenu.jsx';
 import CartPizza from  "../Componets/CartPizza/CartPizza.jsx";
 import Sort from "../Componets/Sort/Sort.jsx";
-import axios from "axios";
+
 
 
 function Home () {
-      const [arrayPizzes,setArrayPizzes] = React.useState([]);
-
+      const [arrayPizzesState,setArrayPizzesState] = React.useState([]);
+      const [openBurgerMenuState,setOpenBurgerMenuState] = React.useState(false);
+      const [categoryState,setCategoryState] = React.useState(0);
+      const [sortTypeState,setSortTypeState] = React.useState({name:"Популярности",sorting:"rating"});
+      
       React.useEffect(()=>{
-      axios.get("https://63189c8df6b281877c719a8d.mockapi.io/Items").then(res =>{
-      setArrayPizzes(res.data);
-      })
-      }, []);
-  
-  const[openBurgerMenu,setOpenBurgerMenu] = React.useState(false);
+      fetch(`https://63189c8df6b281877c719a8d.mockapi.io/Items?${categoryState>0 ? `category=${categoryState}` : ""}&sortBy=${sortTypeState.sorting}&order=asc`)
+      .then((res)=>res.json())
+      .then((arraySort)=>{
+            setArrayPizzesState(arraySort);
+      });
+      },[categoryState,sortTypeState]);
+
+      
+  console.log(categoryState,sortTypeState)
+      
       return(
             <>
             <div className="buttons_and_sort">
                   <div className="burger_icon">
-                        <img onClick={()=>setOpenBurgerMenu(!openBurgerMenu)} src = "/img/BurgerMenuIcon.svg" alt="БургерМеню"/>
-                        {openBurgerMenu ===true? <BurgerMenu/> : ""}
+                        <img onClick={()=>setOpenBurgerMenuState(!openBurgerMenuState)} src = "/img/BurgerMenuIcon.svg" alt="БургерМеню"/>
+                        {openBurgerMenuState===true? <BurgerMenu closeBurgerMenuProps={setOpenBurgerMenuState} categoryProps={categoryState} onChangeCategoryProps={(indexArrayCategories)=> setCategoryState(indexArrayCategories)}/> : ""}
                   </div>
-                  <Sort/>
+                  <Sort sortTypeStateProps = {sortTypeState} onChangeSortProps = {(objectArraySort)=> setSortTypeState(objectArraySort)}/>
             </div>
 
             <div className="main">
-            {arrayPizzes.map((obj) =>(<CartPizza key={obj.name} name = {obj.name}  price = {obj.price} imgURL = {obj.imgURL} sizes = {obj.size} typeNames={obj.typeName}/>))}
+                  {arrayPizzesState.map((obj) =>(<CartPizza key={obj.name} nameProps = {obj.name}  priceProps = {obj.price} imgURLProps = {obj.imgURL} sizeProps = {obj.size} typeNameProps={obj.typeName}/>))}
             </div>
             </>
       )
 }
 
-export default Home;
-
-  
+      export default Home;

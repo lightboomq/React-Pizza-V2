@@ -1,32 +1,29 @@
 import React from 'react';
 import './sort.scss';
 
-function Sort (){
+function Sort ({sortTypeStateProps,onChangeSortProps}){
 
-     
+      const arraySort = [{name:"Популярности", sorting:"rating"},
+                         {name:"Цене", sorting:"price"},
+                         {name:"Алфавиту", sorting:"name"}
+                        ];
+
       const [open,setOpen]=React.useState(false);
-
       
-
-
-      const arraySort = ["популярности","цене","алфавиту",];
-      const [activeIndex,setActiveIndex] = React.useState(0);
-      const sortName = arraySort[activeIndex];
-
-     const onClickList = (index) => {
-            setActiveIndex(index);
+      const onClickList = (objectArraySort) => {
+            onChangeSortProps(objectArraySort);
             setOpen(false);
      }
 
 
       return( 
       <div className="sort_block">
-            <h4 >Сортировка по: <span onClick = {()=>setOpen(!open)}>{sortName}</span>
-                   {open === true? <div className="sort_popular">
+            <h4 >Сортировка по: <span onClick = {()=>setOpen(!open)}>{sortTypeStateProps.name}</span>
+                  {open === true? <div className="sort_popular">
                         <ul>
-                             {arraySort.map((name,index)=>(<li onClick = {()=>onClickList(index)} className={activeIndex ===index ? "active" : ""}>{name}</li>))}
+                              {arraySort.map((objectArraySort)=>(<li onClick = {()=>onClickList(objectArraySort)} className={sortTypeStateProps.name===objectArraySort.name ? "active" : ""}>{objectArraySort.name}</li>))}
                         </ul>
-                   </div> : ""}
+                  </div> : ""}
             </h4>    
             
       </div>

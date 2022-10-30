@@ -22,6 +22,7 @@ function App() {
         <Route path = "/basket" element = {<Basket/>}/>
         <Route path = "*" element = {<NotFound/>}/>
       </Routes>
+     
   </div>
     
     
