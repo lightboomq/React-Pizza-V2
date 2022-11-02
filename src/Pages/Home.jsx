@@ -10,9 +10,14 @@ function Home () {
       const [openBurgerMenuState,setOpenBurgerMenuState] = React.useState(false);
       const [categoryState,setCategoryState] = React.useState(0);
       const [sortTypeState,setSortTypeState] = React.useState({name:"Популярности",sorting:"rating"});
-      
+      const category = categoryState > 0 ? `category=${categoryState}`: ''; 
+      const sortBy = sortTypeState.sorting.replace('expensivePrice_','');
+      const order = sortTypeState.sorting.includes('expensivePrice_') ? 'desc':'asc';
+     
+     
+
       React.useEffect(()=>{
-      fetch(`https://63189c8df6b281877c719a8d.mockapi.io/Items?${categoryState>0 ? `category=${categoryState}` : ""}&sortBy=${sortTypeState.sorting}&order=asc`)
+      fetch(`https://63189c8df6b281877c719a8d.mockapi.io/Items?${category}&sortBy=${sortBy}&order=${order}`)
       .then((res)=>res.json())
       .then((arraySort)=>{
             setArrayPizzesState(arraySort);

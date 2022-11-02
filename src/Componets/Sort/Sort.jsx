@@ -4,7 +4,8 @@ import './sort.scss';
 function Sort ({sortTypeStateProps,onChangeSortProps}){
 
       const arraySort = [{name:"Популярности", sorting:"rating"},
-                         {name:"Цене", sorting:"price"},
+                         {name:"Цене (самые дешевые)", sorting:"price"},
+                         {name:"Цене (самые дорогие)", sorting:"expensivePrice_price"},
                          {name:"Алфавиту", sorting:"name"}
                         ];
 
