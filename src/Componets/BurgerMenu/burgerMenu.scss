@@ -1,32 +1,28 @@
 .burger_menu{
-      position: absolute;
+      position: absolute;  
       z-index: 66;
-      width: 35%;
-      height: 100%;
-      
-      
-            ul{
-                  
+      width: 40%;
+      margin-bottom: 25px;
+      border-radius: 22px;
+            ul{           
                  list-style: none;
                  z-index: 55;
                  background-color: white; 
                   li{            
                         font-size: 27px;
-                        margin-top: 15px;
                         height: 39px;
                         align-items: center;
                         justify-content: space-between;
-                        cursor: pointer; 
-                        border-radius: 5px;              
+                        cursor: pointer;             
                   }
                   .active{
-                        background-color: orange;
+                        background-color: #FFDF8C;
                         color: white;       
                   } 
                                                   
             }
-            @media  (max-width: 600px ) {
-                  width: 207px;
+            @media  (max-width: 405px ) {
+                  width: 135px;
                   z-index: 67;
             }
 }

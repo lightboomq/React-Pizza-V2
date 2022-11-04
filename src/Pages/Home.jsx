@@ -28,14 +28,17 @@ function Home () {
       
       return(
             <>
-            <div className="buttons_and_sort">
-                  <div className="burger_icon">
-                        <img onClick={()=>setOpenBurgerMenuState(!openBurgerMenuState)} src = "/img/BurgerMenuIcon.svg" alt="БургерМеню"/>
-                        {openBurgerMenuState===true? <BurgerMenu closeBurgerMenuProps={setOpenBurgerMenuState} categoryProps={categoryState} onChangeCategoryProps={(indexArrayCategories)=> setCategoryState(indexArrayCategories)}/> : ""}
-                  </div>
+            <div className="burger_menu_block_and_sort"> 
+            <div className="burger_block">  
+                 <div onClick={()=>setOpenBurgerMenuState(!openBurgerMenuState)} >
+                        <div className="burger_line"/> 
+                        <div className="burger_line"/> 
+                        <div className="burger_line"/> 
+                  {openBurgerMenuState===true? <BurgerMenu closeBurgerMenuProps={setOpenBurgerMenuState} categoryProps={categoryState} onChangeCategoryProps={(indexArrayCategories)=> setCategoryState(indexArrayCategories)}/> : ""}  
+                 </div> 
+            </div>               
                   <Sort sortTypeStateProps = {sortTypeState} onChangeSortProps = {(objectArraySort)=> setSortTypeState(objectArraySort)}/>
             </div>
-
             <div className="main">
                   {arrayPizzesState.map((obj) =>(<CartPizza key={obj.name} nameProps = {obj.name}  priceProps = {obj.price} imgURLProps = {obj.imgURL} sizeProps = {obj.size} typeNameProps={obj.typeName}/>))}
             </div>

@@ -4,7 +4,7 @@ import React from "react";
 
 function BurgerMenu ({categoryProps,onChangeCategoryProps,closeBurgerMenuProps}) {
 
-      const arrayСategory = ['Все','Мясные','Вегетарианская','Гриль','Острые','Закрытые'];
+      const arrayСategory = ['Все','Мясные','Гриль','Острые','Закрытые'];
       const iconBurger=(indexArrayCategories)=>{
             onChangeCategoryProps(indexArrayCategories)
             closeBurgerMenuProps(false)
