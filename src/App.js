@@ -7,18 +7,16 @@ import NotFound from "./Pages/NotFound.jsx";
 import "./main.scss";
 import './wrapper.scss';
 
+function App() {
 
+  const [searchValue,setSearchValue] = React.useState('');
 
-
-
-function App() { 
-  
   return (
   <div className="wrapper">
 
-      <Header/>
+      <Header searchValue={searchValue} setSearchValue={setSearchValue}/>
       <Routes>
-        <Route path = "/" element = {<Home/>}/>
+        <Route path = "/" element = {<Home searchValue={searchValue}/>}/>
         <Route path = "/basket" element = {<Basket/>}/>
         <Route path = "*" element = {<NotFound/>}/>
       </Routes>

@@ -5,7 +5,7 @@ import Sort from "../Componets/Sort/Sort.jsx";
 
 
 
-function Home () {
+function Home ({searchValue}) {
       const [arrayPizzesState,setArrayPizzesState] = React.useState([]);
       const [openBurgerMenuState,setOpenBurgerMenuState] = React.useState(false);
       const [categoryState,setCategoryState] = React.useState(0);
@@ -13,7 +13,6 @@ function Home () {
       const category = categoryState > 0 ? `category=${categoryState}`: ''; 
       const sortBy = sortTypeState.sorting.replace('expensivePrice_','');
       const order = sortTypeState.sorting.includes('expensivePrice_') ? 'desc':'asc';
-     
      
 
       React.useEffect(()=>{
@@ -40,7 +39,12 @@ function Home () {
                   <Sort sortTypeStateProps = {sortTypeState} onChangeSortProps = {(objectArraySort)=> setSortTypeState(objectArraySort)}/>
             </div>
             <div className="main">
-                  {arrayPizzesState.map((obj) =>(<CartPizza key={obj.name} nameProps = {obj.name}  priceProps = {obj.price} imgURLProps = {obj.imgURL} sizeProps = {obj.size} typeNameProps={obj.typeName}/>))}
+                  {arrayPizzesState.filter((obj)=>{
+                        if(obj.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())){
+                              return true;
+                              } 
+                              return false;
+                  }).map((obj) =>(<CartPizza  nameProps = {obj.name}  priceProps = {obj.price} imgURLProps = {obj.imgURL} sizeProps = {obj.size} typeNameProps={obj.typeName}/>))}
             </div>
             </>
       )

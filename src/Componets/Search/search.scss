@@ -1,0 +1,35 @@
+.search{
+      margin-left: 15px;
+      margin-right: 25px;
+      background-color: white;
+      display:flex;
+      
+      align-items: center;
+      border: 1px solid rgba(0,0,0,.1);
+      width: 400px;
+      height: 48px;
+      border-radius: 10px;
+            .lypa{
+                  margin-left:16px;
+            }
+            input{
+                  margin-left:10px;
+                  outline:none;
+                  border: none; 
+                  font-weight: 400;
+                  font-size: 16px;
+            
+            }
+            .clear_input{
+                  position: relative;
+                  left: 120px;
+                  cursor:pointer;
+                  opacity: 0.3;
+            }
+            .clear_input:hover{
+                  opacity: 0.8;
+            }
+            @media (max-width: 750px) {
+                 display: none;
+                }                   
+}
