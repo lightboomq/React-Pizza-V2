@@ -37,7 +37,6 @@ function Home () {
                         </div> 
                   </div>               
                   <Sort sortTypeStateProps = {sortTypeState} onChangeSortProps = {(objectArraySort)=> setSortTypeState(objectArraySort)}/>
-                  
             </div>
             <Search searchValueProps={searchValue} setSearchValueProps={setSearchValue}/>
             <div className="main">
