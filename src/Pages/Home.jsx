@@ -1,5 +1,5 @@
 import React from "react";
-import BurgerMenu from '../Componets/BurgerMenu/BurgerMenu.jsx';
+import CategoryPizza from '../Componets/CategoryPizza/CategoryPizza.jsx';
 import CartPizza from  "../Componets/CartPizza/CartPizza.jsx";
 import Sort from "../Componets/Sort/Sort.jsx";
 import Search from "../Componets/Search/Search.jsx"
@@ -27,18 +27,20 @@ function Home () {
       
       return(
       <>
-            <div className="burger_menu_block_and_sort"> 
+
+            <div className="burger_menu_block_and_sort">          
                   <div className="burger_block">  
                         <div onClick={()=>setOpenBurgerMenuState(!openBurgerMenuState)} >
-                              <div className="burger_line"/> 
-                              <div className="burger_line"/> 
-                              <div className="burger_line"/> 
-                              {openBurgerMenuState===true? <BurgerMenu closeBurgerMenuProps={setOpenBurgerMenuState} categoryProps={categoryState} onChangeCategoryProps={(indexArrayCategories)=> setCategoryState(indexArrayCategories)}/> : ""}  
-                        </div> 
-                  </div>               
-                  <Sort sortTypeStateProps = {sortTypeState} onChangeSortProps = {(objectArraySort)=> setSortTypeState(objectArraySort)}/>
+                        </div>  
+                         <CategoryPizza closeBurgerMenuProps={setOpenBurgerMenuState} categoryProps={categoryState} onChangeCategoryProps={(indexArrayCategories)=> setCategoryState(indexArrayCategories)}/>  
+                  </div>    
+                  
             </div>
-            <Search searchValueProps={searchValue} setSearchValueProps={setSearchValue}/>
+            {/*<div className="search_and_sort">
+                  <Search searchValueProps={searchValue} setSearchValueProps={setSearchValue}/>
+      <Sort sortTypeStateProps = {sortTypeState} onChangeSortProps = {(objectArraySort)=> setSortTypeState(objectArraySort)}/>
+            </div>*/}
+            
             <div className="main">
                   {arrayPizzesState.filter((obj)=>{
                         if(obj.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())){

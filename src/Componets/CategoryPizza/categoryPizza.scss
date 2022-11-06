@@ -1,0 +1,40 @@
+ .ul{ 
+      display: flex;
+            li{   
+                  display: flex; 
+                  justify-content: center;
+                  align-items: center;
+                  padding-left: 30px;
+                  padding-right: 30px;
+                  height: 48px; 
+                  border-radius: 30px;
+                  list-style-type: none;
+                  background-color: #F9F9F9;
+                  font-weight: 600;
+                  margin-left: 10px;
+            }
+            .active{
+                  background-color: #282828;
+                  color: white;       
+            } 
+            @media (max-width: 717px){
+                 width: 350px; 
+                 overflow: scroll;
+                 ul{
+                    margin: auto;
+                 }     
+            }  
+            @media (max-width: 405px){
+                  width: 250px; 
+                  overflow: scroll;
+                  li{
+                   padding-left: 15px;
+                   padding-right: 15px;
+                   height: 40px;
+                   margin: auto;
+                   margin-left: 5px;
+                  }     
+             }              
+                                                  
+}
+            

@@ -1,9 +1,7 @@
 .search_block{
       display: flex;
       align-items: center;
-      width: 86%;
-      margin: auto;
-      margin-top: 50px;
+      
       .search{ 
             display: flex;
             align-items: center;
@@ -37,14 +35,6 @@
                   }
             
       }
-      @media (max-width: 977px){
-            width: 30%;
-      }
-      @media (max-width: 637px){
-            width: 50%;
-      }
-      @media (max-width: 456px){
-            width: 70%;
-      }
+      
 }
 

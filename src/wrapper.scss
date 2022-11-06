@@ -23,21 +23,18 @@
         justify-content: space-between;
         width: 86%;
         height: 46px;
-        display: flex;
-            .burger_line{
-              margin-top: 5px;
-              margin-bottom: 5px;
-              width: 45px;
-              height: 5px;
-              background-color: #292929;
-              line-height: 52px;
-              border-radius: 12px;
-              cursor:pointer;  
-            }
-         
-          
+        display: flex;       
       }
-          
+      .search_and_sort{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1204px;
+        height: 60px;
+        background-color: #FFDF8C;
+        margin: auto;
+        margin-top: 40px;
+      }    
 }
 
     

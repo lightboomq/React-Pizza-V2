@@ -9,7 +9,7 @@ function CartPizza({nameProps,priceProps,imgURLProps,sizeProps,typeNameProps}) {
             setCounter(pizzaCounter+1)
       }
       const [activeIndexName,setActiveIndexName] = React.useState(1);
-      const [activeIndexSize,setActiveIndexSize] = React.useState();      
+      const [activeIndexSize,setActiveIndexSize] = React.useState(0);      
 
       const onClickButtonName=(index) => {
             setActiveIndexName(index);
