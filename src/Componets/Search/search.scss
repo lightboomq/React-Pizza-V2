@@ -12,7 +12,6 @@
                         margin-left:10px;
                   }
                   input{
-                        width: 60px;
                         margin-left:5px;
                         outline:none;
                         border: none; 
@@ -34,11 +33,20 @@
                   opacity: 0.8;
             }
       @media (max-width: 939px){
-            width: 170px;
+            width: 200px;
+            input{
+                  width: 100px;
+            }
             .clear_input{
                   margin-right: 5px;
             }
-      }   
+      }
+      @media (max-width: 443px){
+            width: 150px;
+            input{
+                  width: 70px;
+            }
+      }      
       @media (max-width: 400px){
             width: 130px;
             height: 33;
