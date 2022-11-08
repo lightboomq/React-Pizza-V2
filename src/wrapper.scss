@@ -16,7 +16,7 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     margin: auto;
-        .burger_menu_block_and_sort{
+        .category{
         margin: 0 auto;
         margin-top: 40px;
         align-items: center;
@@ -29,12 +29,24 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 1204px;
         height: 60px;
-        background-color: #FFDF8C;
-        margin: auto;
         margin-top: 40px;
-      }    
+        margin-right: 70px;
+        margin-left: 70px;
+        }    
+        @media (max-width: 939px){
+            .search_and_sort{
+              justify-content: space-around;
+              margin-right: 0px;
+              margin-left: 0px;
+            }
+        } 
+        @media (max-width: 400px){
+          .search_and_sort{
+            margin-right: 0px;
+            margin-left: 0px;
+          }
+      }             
 }
 
     

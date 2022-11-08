@@ -7,7 +7,6 @@ import Search from "../Componets/Search/Search.jsx"
 
 function Home () {
       const [arrayPizzesState,setArrayPizzesState] = React.useState([]);
-      const [openBurgerMenuState,setOpenBurgerMenuState] = React.useState(false);
       const [categoryState,setCategoryState] = React.useState(0);
       const [sortTypeState,setSortTypeState] = React.useState({name:"Популярности",sorting:"rating"});
       const [searchValue,setSearchValue] = React.useState('');
@@ -28,19 +27,13 @@ function Home () {
       return(
       <>
 
-            <div className="burger_menu_block_and_sort">          
-                  <div className="burger_block">  
-                        <div onClick={()=>setOpenBurgerMenuState(!openBurgerMenuState)} >
-                        </div>  
-                         <CategoryPizza closeBurgerMenuProps={setOpenBurgerMenuState} categoryProps={categoryState} onChangeCategoryProps={(indexArrayCategories)=> setCategoryState(indexArrayCategories)}/>  
-                  </div>    
-                  
+            <div className="category">          
+                  <CategoryPizza  categoryProps={categoryState} onChangeCategoryProps={(indexArrayCategories)=> setCategoryState(indexArrayCategories)}/>        
             </div>
-            {/*<div className="search_and_sort">
+            <div className="search_and_sort">
                   <Search searchValueProps={searchValue} setSearchValueProps={setSearchValue}/>
-      <Sort sortTypeStateProps = {sortTypeState} onChangeSortProps = {(objectArraySort)=> setSortTypeState(objectArraySort)}/>
-            </div>*/}
-            
+                  <Sort sortTypeStateProps = {sortTypeState} onChangeSortProps = {(objectArraySort)=> setSortTypeState(objectArraySort)}/>
+            </div>
             <div className="main">
                   {arrayPizzesState.filter((obj)=>{
                         if(obj.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())){

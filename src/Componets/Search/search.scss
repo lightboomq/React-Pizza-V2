@@ -1,40 +1,61 @@
-.search_block{
+.search{ 
       display: flex;
       align-items: center;
-      
-      .search{ 
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: 1px solid rgba(0,0,0,.1);
-            width: 300px;
-            height: 36px;
-            border-radius: 10px;
-                  .search_input{
-                        display: flex;
-                        .lypa{
-                              margin-left:16px;
-                        }
-                        input{          
-                              display: flex;
-                              width: 120px;
-                              margin-left:10px;
-                              outline:none;
-                              border: none; 
-                              font-weight: 400;
-                              font-size: 16px;
-                        }
-                  }   
-                  .clear_input{
-                        margin-right: 20px;
-                        cursor:pointer;
-                        opacity: 0.3;
+      justify-content: space-between;
+      border: 1px solid rgba(0,0,0,.1);
+      width: 300px;
+      height: 30px;
+      border-radius: 10px;
+            .search_input{
+                  display: flex;
+                  .lypa{
+                        margin-left:10px;
                   }
-                  .clear_input:hover{
-                        opacity: 0.8;
+                  input{
+                        width: 60px;
+                        margin-left:5px;
+                        outline:none;
+                        border: none; 
+                        font-weight: 400;
+                        font-size: 16px;
+                        &::placeholder{
+                        outline:none;
+                        border: none;
+                        }
                   }
-            
+                  
+            }   
+            .clear_input{
+                  margin-right: 20px;
+                  cursor:pointer;
+                  opacity: 0.3;
+            }
+            .clear_input:hover{
+                  opacity: 0.8;
+            }
+      @media (max-width: 939px){
+            width: 170px;
+            .clear_input{
+                  margin-right: 5px;
+            }
+      }   
+      @media (max-width: 400px){
+            width: 130px;
+            height: 33;
+            .clear_input{
+                  margin-right: 10px;
+            }
+           input{ 
+            &::placeholder{
+                  outline:none;
+                  border: none;
+                  font-size: 12px;
+                  }
+           }
       }
-      
+           
+                 
 }
+      
+
 

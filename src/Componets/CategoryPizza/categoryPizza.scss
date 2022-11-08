@@ -12,6 +12,7 @@
                   background-color: #F9F9F9;
                   font-weight: 600;
                   margin-left: 10px;
+                  cursor: pointer;
             }
             .active{
                   background-color: #282828;
@@ -25,7 +26,7 @@
                  }     
             }  
             @media (max-width: 405px){
-                  width: 250px; 
+                  width: 270px; 
                   overflow: scroll;
                   li{
                    padding-left: 15px;
