@@ -1,7 +1,9 @@
  .category_pizza{
-      margin: auto;
+      margin-right: auto;
+      
  .ul{ 
       display: flex;
+      
             li{   
                   display: flex; 
                   justify-content: center;
@@ -23,19 +25,16 @@
             @media (max-width: 717px){
                  width: 350px; 
                  overflow: scroll;
-                 ul{
-                    margin: auto;
-                 }     
+                 margin: auto;      
             }  
             @media (max-width: 405px){
-                  width: 255px; 
+                  width: 290px; 
                   overflow: scroll;
                   li{
-                   padding-left: 15px;
-                   padding-right: 15px;
-                   height: 40px;
-                   margin: auto;
-                   margin-left: 5px;
+                  padding-left: 15px;
+                  padding-right: 15px;
+                  height: 40px;
+                  margin-left: 5px;
                   }     
              }              
                                                   

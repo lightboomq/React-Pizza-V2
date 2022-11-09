@@ -3,7 +3,7 @@ import CategoryPizza from '../Componets/CategoryPizza/CategoryPizza.jsx';
 import CartPizza from  "../Componets/CartPizza/CartPizza.jsx";
 import Sort from "../Componets/Sort/Sort.jsx";
 import Search from "../Componets/Search/Search.jsx"
-
+import Pagination from "../Componets/Paginastion/Pagination.jsx";
 
 function Home () {
       const [arrayPizzesState,setArrayPizzesState] = React.useState([]);
