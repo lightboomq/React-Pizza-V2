@@ -11,7 +11,8 @@ function Header(){
                         <div className="shoppingBasket">
                               <div>0 ₽</div>
                               <div className="delimetr"></div>
-                              <img width={32} height={32} src = "/img/icon_basket.png"/>  
+                              <img className="img_icon"width={26} height={26} src = "/img/icon_basket.png"/> 
+                              <div className="price">0</div> 
                         </div>
                   </Link>             
             </div>

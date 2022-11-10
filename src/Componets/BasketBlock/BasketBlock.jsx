@@ -4,7 +4,7 @@ function BasketBlock () {
       return(
             <div className="basket">
                   <div className="basket_content">
-                        
+    
                         <h2>🥺<br/> Корзина пустая  </h2>
                         <p>
                               Вероятней всего, вы не заказывали ещё пиццу.<br/>

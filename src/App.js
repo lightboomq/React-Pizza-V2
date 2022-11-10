@@ -6,20 +6,23 @@ import Basket from "./Pages/Basket.jsx"
 import NotFound from "./Pages/NotFound.jsx";
 import "./main.scss";
 import './wrapper.scss';
+export const SearchContext = React.createContext();
 
 function App() {
 
+const [searchValue,setSearchValue] = React.useState('');
  
-
   return (
     
   <div className="wrapper">
+    <SearchContext.Provider value={{searchValue,setSearchValue}}>
       <Header />
       <Routes>
-        <Route path = "/" element = {<Home/>}/>
+        <Route path = "/" element = {<Home />}/>
         <Route path = "/basket" element = {<Basket/>}/>
         <Route path = "*" element = {<NotFound/>}/>
       </Routes>
+    </SearchContext.Provider> 
      
   </div>
     
