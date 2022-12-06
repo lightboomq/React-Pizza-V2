@@ -1,7 +1,7 @@
- .category_pizza{
+ .category-pizza{
       margin-right: auto;
       
- .ul{ 
+ .category-pizza__ul{ 
       display: flex; 
             li{   
                   display: flex; 
@@ -17,7 +17,7 @@
                   margin-left: 10px;
                   cursor: pointer;
             }
-            .active{
+            .category-pizza__active{
                   background-color: #282828;
                   color: white;       
             } 

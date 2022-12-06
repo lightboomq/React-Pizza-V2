@@ -19,22 +19,22 @@ function CartPizza({nameProps,priceProps,imgURLProps,sizeProps,typeNameProps}) {
       }
       
       return(
-      <div className="cart_pizza_block">   
-              <div className="сart_pizza">
+      <div>   
+              <div className="сart-pizza">
                   <img width={235} height={235} src = {imgURLProps} alt=""/> 
                    <h3>{nameProps}</h3> 
-                  <div className="cart_selector">
+                  <div className="сart-pizza__cart-selector">
                         <ul>
-                              {typeNameProps.map((typeName,index) => <li onClick ={()=>onClickButtonName(index)} className={activeIndexName===index? 'active' : 'button_1'}>{typeName}</li>)}                
+                              {typeNameProps.map((typeName,index) => <li key={index} onClick ={()=>onClickButtonName(index)} className={activeIndexName===index? 'active' : 'button_1'}>{typeName}</li>)}                
                         </ul>
 
                         <ul>
-                              {sizeProps.map((size,index)=><li onClick={()=>onClickButtonSize(index)} className={activeIndexSize===index? 'active' : "button_1"}>{size}</li>)}
+                              {sizeProps.map((size,index)=><li key={index} onClick={()=>onClickButtonSize(index)} className={activeIndexSize===index? 'active' : "button_1"}>{size}</li>)}
                         </ul>
                   </div>
-                  <div className="priceAndAdd">
+                  <div className="сart-pizza__price-and-add">
                         <h4>от: <span>{priceProps} ₽</span></h4>
-                        <button onClick = {buttonAdd} className="Add">
+                        <button onClick = {buttonAdd} className="сart-pizza__add">
                               <img width = {12} height = {12} src = "/img/plus-add-cart-button.svg"/>
                               Добавить <i>{pizzaCounter}</i>    
                         </button>

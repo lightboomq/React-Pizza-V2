@@ -8,7 +8,7 @@
       background-color: #FFDF8C;
       padding-top: 50px;
   }
-.wrapper{
+.container{
     display: flex;
     flex-direction: column;
     max-width: 1400px;
@@ -16,7 +16,7 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     margin: auto;
-        .category{
+      .category{
         margin: 0 auto;
         margin-top: 40px;
         align-items: center;
@@ -25,7 +25,7 @@
         height: 46px;
         display: flex;       
       }
-      .search_and_sort{
+      .search-and-sort{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -35,14 +35,14 @@
         margin-left: 70px;
         }    
         @media (max-width: 939px){
-            .search_and_sort{
+            .search-and-sort{
               justify-content: space-around;
               margin-right: 0px;
               margin-left: 0px;
             }
         } 
         @media (max-width: 400px){
-          .search_and_sort{
+          .search-and-sort{
             margin-right: 0px;
             margin-left: 0px;
           }

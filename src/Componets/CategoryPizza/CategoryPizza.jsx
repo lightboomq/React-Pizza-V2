@@ -7,15 +7,14 @@ function CategoryPizza({categoryProps,onChangeCategoryProps,}) {
       const arrayСategory = ['Все','Мясные','Гриль','Острые','Закрытые'];
       
       return(
-      <div className = "category_pizza">     
-                 <ul className="ul">
+      <div className = "category-pizza">     
+                 <ul className="category-pizza__ul">
                         {arrayСategory.map((arrayCategoryName,indexArrayCategories)=>(
-                              <li onClick={()=>onChangeCategoryProps(indexArrayCategories)} className = {categoryProps === indexArrayCategories? 'active' : ''}>
+                              <li key={indexArrayCategories} onClick={()=>onChangeCategoryProps(indexArrayCategories)} className = {categoryProps === indexArrayCategories? 'category-pizza__active' : ''}>
                                     {arrayCategoryName} 
                               </li>             
                         ))}     
                  </ul>    
-            <div className="empty_block"></div>
       </div>                 
       )
 

@@ -14,7 +14,7 @@ function Home () {
       const sortBy = sortTypeState.sorting.replace('expensivePrice_','');
       const order = sortTypeState.sorting.includes('expensivePrice_') ? 'desc':'asc';
       const {searchValue} = React.useContext(SearchContext);
-      console.log('Home re-render')
+      
       React.useEffect(()=>{
       fetch(`https://63189c8df6b281877c719a8d.mockapi.io/Items?${category}&sortBy=${sortBy}&order=${order}`)
       .then((res)=>res.json())
@@ -25,11 +25,10 @@ function Home () {
 
       return(
       <>
-
             <div className="category">          
-                  <CategoryPizza  categoryProps={categoryState} onChangeCategoryProps={(indexArrayCategories)=> setCategoryState(indexArrayCategories)}/>        
+                  <CategoryPizza categoryProps={categoryState} onChangeCategoryProps={(indexArrayCategories)=> setCategoryState(indexArrayCategories)}/>        
             </div>
-            <div className="search_and_sort">
+            <div className="search-and-sort">
                   <Search />
                   <Sort sortTypeStateProps = {sortTypeState} onChangeSortProps = {(objectArraySort)=> setSortTypeState(objectArraySort)}/>
             </div>
@@ -39,7 +38,7 @@ function Home () {
                               return true;
                               } 
                               return false;
-                  }).map((obj) =>(<CartPizza  nameProps = {obj.name}  priceProps = {obj.price} imgURLProps = {obj.imgURL} sizeProps = {obj.size} typeNameProps={obj.typeName}/>))}
+                  }).map((obj,i) =>(<CartPizza key={i} nameProps = {obj.name}  priceProps = {obj.price} imgURLProps = {obj.imgURL} sizeProps = {obj.size} typeNameProps={obj.typeName}/>))}
             </div>
       </>
       )

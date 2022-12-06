@@ -18,9 +18,9 @@ function Sort ({sortTypeStateProps,onChangeSortProps}){
 
 
       return( 
-      <div className="sort_block">
+      <div className="sort-block">
             <h4 >Сортировка по: <span onClick = {()=>setOpen(!open)}>{sortTypeStateProps.name}</span>
-                  {open === true? <div className="sort_popular">
+                  {open === true? <div className="sort-block__sort-popular">
                         <ul>
                               {arraySort.map((objectArraySort)=>(<li onClick = {()=>onClickList(objectArraySort)} className={sortTypeStateProps.name===objectArraySort.name ? "active" : ""}>{objectArraySort.name}</li>))}
                         </ul>

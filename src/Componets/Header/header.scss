@@ -7,16 +7,11 @@
       height: 135px;
       background-color: white;
       border-bottom: 1px solid rgba(0,0,0,.1); 
-            .react_header_logo{
+            .header__react-logo{
                   position: relative;
                   right: 2.9px;
             }           
-            p{    
-                  font-weight: 400;
-                  font-size: 16px;
-                  color:#7b7b7b;
-            }            
-            .shoppingBasket{
+            .header__shopping-cart{
                   display: flex;
                   align-items: center;
                   justify-content: center;
@@ -27,7 +22,7 @@
                   color:white;
                   font-size: 16px;
                   font-weight: 600;
-                        .delimetr{   
+                        .header__delimitr{   
                               background-color: hsla(0,0%,100%,.25);
                               height: 25px;
                               margin-left: 14px;
@@ -35,10 +30,11 @@
                               width: 1px;
                               text-decoration: none;
                         }
-                        .img_icon{
+                        .header__img-icon{
                               position: relative;
                               right: 5px;
                         }
             }
+            
 
 }

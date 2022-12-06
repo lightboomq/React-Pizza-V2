@@ -6,9 +6,9 @@
       width: 300px;
       height: 30px;
       border-radius: 10px;
-            .search_input{
+            .search__input{
                   display: flex;
-                  .lypa{
+                  .search__lypa{
                         margin-left:10px;
                   }
                   input{
@@ -24,12 +24,12 @@
                   }
                   
             }   
-            .clear_input{
+            .search__clear-input{
                   margin-right: 20px;
                   cursor:pointer;
                   opacity: 0.3;
             }
-            .clear_input:hover{
+            .search__clear-input:hover{
                   opacity: 0.8;
             }
       @media (max-width: 939px){
@@ -37,7 +37,7 @@
             input{
                   width: 100px;
             }
-            .clear_input{
+            .search__clear-input{
                   margin-right: 5px;
             }
       }
@@ -50,7 +50,7 @@
       @media (max-width: 400px){
             width: 150px;
             height: 33;
-            .clear_input{
+            .search__clear-input{
                   margin-right: 10px;
             }
            input{ 
